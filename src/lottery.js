@@ -1,58 +1,59 @@
 import web3 from "./web3";
 
-const address = "0x22F4A63D2a9A55Ebb51520C9c6274C1A5E74C973";
+const address = "0xBeB435dd043A72EDE6c7be926F1C2c84F1B152a3";
 
 const abi = [
   {
-    constant: true,
     inputs: [],
-    name: "manager",
-    outputs: [{ name: "", type: "address" }],
-    payable: false,
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    constant: false,
-    inputs: [],
-    name: "pickWinner",
-    outputs: [],
-    payable: false,
     stateMutability: "nonpayable",
-    type: "function",
+    type: "constructor",
+    signature: "constructor",
   },
   {
-    constant: true,
-    inputs: [],
-    name: "getPlayers",
-    outputs: [{ name: "", type: "address[]" }],
-    payable: false,
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    constant: false,
     inputs: [],
     name: "enter",
     outputs: [],
-    payable: true,
     stateMutability: "payable",
     type: "function",
-  },
-  {
-    constant: true,
-    inputs: [{ name: "", type: "uint256" }],
-    name: "players",
-    outputs: [{ name: "", type: "address" }],
-    payable: false,
-    stateMutability: "view",
-    type: "function",
+    payable: true,
+    signature: "0xe97dcb62",
   },
   {
     inputs: [],
-    payable: false,
+    name: "getPlayers",
+    outputs: [
+      { internalType: "address payable[]", name: "", type: "address[]" },
+    ],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    signature: "0x8b5b9ccc",
+  },
+  {
+    inputs: [],
+    name: "manager",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    signature: "0x481c6a75",
+  },
+  {
+    inputs: [],
+    name: "pickWinner",
+    outputs: [],
     stateMutability: "nonpayable",
-    type: "constructor",
+    type: "function",
+    signature: "0x5d495aea",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "players",
+    outputs: [{ internalType: "address payable", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+    constant: true,
+    signature: "0xf71d96cb",
   },
 ];
 
